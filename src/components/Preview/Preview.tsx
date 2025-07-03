@@ -1,5 +1,3 @@
-import { jsPDF } from 'jspdf';
-import html2canvas from 'html2canvas-oklch';
 import { rusLabel } from '../../utils/rusLabel';
 import { useResume } from '../../hooks/useResume';
 
@@ -7,6 +5,10 @@ export default function Preview() {
     const { sections } = useResume();
 
     const downloadPdf = async () => {
+        const [{ default: html2canvas }, { jsPDF }] = await Promise.all([
+            import('html2canvas-oklch'),
+            import('jspdf')
+        ])
         const el = document.getElementById('resume');
         if (!el) return;
 
