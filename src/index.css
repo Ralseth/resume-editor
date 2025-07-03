@@ -1,0 +1,39 @@
+@reference "tailwindcss";
+@tailwind base;
+@tailwind components;
+
+@layer components {
+  .card {
+    @apply bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden;
+  }
+  .input {
+    @apply w-[90%] mb-3 px-3 py-2 border border-gray-300 rounded
+    focus:border-sky-500 focus:ring-1 focus:ring-sky-500 text-sm;
+  }
+  .textarea {
+    @apply w-[90%] mb-3 px-3 py-2 border border-gray-300 rounded
+    focus:border-sky-500 focus:ring-1 focus:ring-sky-500 text-sm resize-none;
+  }
+  .select {
+    @apply border border-gray-300 rounded px-2 py-1 text-sm
+    focus:outline-none focus:ring-2 focus:ring-sky-500;
+  }
+  .a4 {
+    width: 794px; min-height: 1123px;
+    @apply bg-white shadow-xl mx-auto p-10 overflow-visible;
+  }
+  .section-title {
+    @apply text-lg font-semibold pb-1 mb-3 border-b border-gray-200;
+  }
+  .section-text {
+    @apply text-sm leading-relaxed;
+  }
+}
+
+@tailwind utilities;
+
+/* базовые стили */
+body {
+  @apply bg-neutral-100 text-gray-900 p-6;
+  font-family: 'Inter', sans-serif;
+}

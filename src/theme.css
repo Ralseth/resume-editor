@@ -1,0 +1,16 @@
+:root {
+    --bg: #f3f4f6;     /* светлый фон */
+    --fg: #111827;     /* тёмный текст */
+}
+
+.dark {
+    --bg: #1f2937;     /* тёмный фон */
+    --fg: #f9fafb;     /* светлый текст */
+}
+
+/* Применяем переменные */
+body {
+    background-color: var(--bg);
+    color: var(--fg);
+    transition: background-color 0.3s, color 0.3s;
+}
