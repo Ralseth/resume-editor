@@ -19,6 +19,9 @@
     /* Типы, чтобы TS подтянул декларации из @types */
     "types": ["vite/client", "react", "react-dom"],
 
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
